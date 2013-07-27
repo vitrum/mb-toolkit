@@ -1,0 +1,27 @@
+<head>
+  <title>shakegame</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+</head>
+
+<body>
+ 
+  {{> hello}}
+   {{> message }}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
+
+<template name="message">
+  <div class="hero-unit">
+    <h1>Messages</h1>
+    <ul>
+      {{#each messages}}
+      <li>{{username}} says: {{content}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
