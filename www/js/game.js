@@ -21,7 +21,7 @@ $(document).ready(function(){
 	    	shakeTime = new Date();
 	    }
 	    playerShakeRecord = playerShakeRecord + 1;
-	    if( playerShakeRecord > 50){
+	    if( playerShakeRecord > 8){
 	    	var endTime = new Date();
 	    	var timeDifference = (endTime.getTime() - shakeTime.getTime());
 
@@ -64,12 +64,13 @@ $(document).ready(function(){
 	    $('#ShowDiv').html( num + '秒');
 	    if (num == 0) {
 	    	console.log("shake remove!");
+	    	$('#content h2').html('Run run run!');
 	        window.removeEventListener('shake', shakeEventDidOccur, false);
 	    }
 	}
 	
-	$(".run").live("click", function(e){
-		
+	$(".run").on("click", function(e){
+		alert("Ok ok,let's run~~~");
 	})
 
 	function openme() { 
